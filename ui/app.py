@@ -5,7 +5,7 @@ import joblib
 
 st.title("Network Intrusion Detection System")
 
-model = joblib.load("models/cicids_model.pkl")
+model = joblib.load("../models/cicids_model.pkl")
 
 file = st.file_uploader("Upload CSV file", type=["csv"])
 
