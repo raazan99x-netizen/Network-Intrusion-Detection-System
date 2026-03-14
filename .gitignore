@@ -1,1 +1,4 @@
 datasets/
+venv314/
+__pycache__/
+.ipynb_checkpoints
