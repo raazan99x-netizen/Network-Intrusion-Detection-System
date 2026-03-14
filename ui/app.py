@@ -1,11 +1,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
 import joblib
 
 st.title("Network Intrusion Detection System")
 
-model = joblib.load("../models/cicids_model.pkl")
+model_path = os.path.join("models", "cicids_model.pkl")
+model = joblib.load(model_path)
 
 file = st.file_uploader("Upload CSV file", type=["csv"])
 
