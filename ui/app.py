@@ -7,7 +7,7 @@ import os
 
 st.title("Network Intrusion Detection System")
 
-model = joblib.load("../models/cicids_model.pkl")
+model = joblib.load("models/cicids_model.pkl")
 
 file = st.file_uploader("Upload CSV file", type=["csv"])
 
@@ -15,7 +15,7 @@ if file is not None:
     data = pd.read_csv(file)
 
 else:
-    zip_path = "../datasets.zip"
+    zip_path = "datasets.zip"
 
     if not os.path.exists(zip_path):
         st.error("datasets.zip not found")
